@@ -17,14 +17,14 @@ var commentRoutes       = require("./routes/comments"),
     indexRoutes         = require("./routes/index");
 
 
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
+mongoose.connect(url);
 
-mongoose.connect(process.env.DATABASEURL);
-
-//mongoose.connect("mongodb://Brandon:YKTdru5Y@ds251277.mlab.com:51277/sleepspots")
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/public/scripts"))
 app.use(methodOverride("_method"));
 app.use(flash());
 // seedDB(); //seed the database

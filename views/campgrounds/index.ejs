@@ -3,17 +3,31 @@
 
 <div class="container">
     <header class="jumbotron">
-        <h1>Welcome to YelpCamp</h1>
-        <p>View our hand-picked campgrounds from all over the world!</p>
-        <p>
-            <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground</a>    
+        <h1>Hello Friends!</h1>
+        <p> On January 22, 2018 Taylor and Brandon took off on the adventure of a lifetime - a roadtrip with no definitive end.</p> 
+        <p>The roadtrip has three main purposes: </p>
+        <ol>
+            <li>To adventure and see all the beautiful places the south has to offer</li>
+            <li>To spend quality time with friends & family</li>
+            <li>To escape the horrible, sunless winter in southeast Michigan</li>
+        </ol>
+         
+        <p>While Taylor and Brandon played around with the idea of starting a blog, they decided instead to stay true to their hippy beliefs. They didn't want a blog to interfer with "being in the moment."
+        So Sleep'nSpots was born: the perfect way for family & friends to keep up with their adventures, and for them to remember said adventures, without the commitment of a regular blog. </p>
+        <p>Click any of the spots below to see where they've been sleeping.</p> 
         </p>
-        
+       
+        <p>If you want to leave us a comment, click <a href="/register">sign up</a> and make an account with your real name so we know who you are!</p>
+         <% if(currentUser && currentUser.username === ("Taylor") || currentUser && currentUser.username === ("Brandon")){ %>
+        <p>
+            <a class="btn btn-primary btn-lg" href="/campgrounds/new"><span><i class="home icon"></i></span>Add New Campground</a>    
+        </p>
+         <% } %>
     </header>
     
     <div class="row">   
         <div class="col-lg-12">
-            <h3>Our Most Popular Campgrounds!</h3>
+            <h3>Where we've been sleepin...</h3>
         </div>
     </div>
     
@@ -32,8 +46,6 @@
             </div>
         <% }) %> 
     </div>
-    
-    
 </div>
 
 

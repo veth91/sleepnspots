@@ -1,8 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
 .delete-form {
     display: inline;  
 }
+.navbar-default .navbar-brand{
+    color: black;
+}
+.navbar-default .navbar-nav>li>a {
+    color: black;
+}
+p {
+    font-size: 18px;
+}
+body {
+    font-family: raleway
+}
 .thumbnail img{
     width: 100%;
+    /*width: auto;*/
+    /*max-width: 300px;*/
+    /*height: auto;*/
+    /*max-height: 500px;*/
 }
 .thumbnail {
     padding: 0;
@@ -10,3 +28,13 @@
 .thumbnail .caption-full {
     padding: 9px;   
 }
+ol {
+    font-size: 18px; 
+}
+
+
+      /*html, body {*/
+      /*  height: 100%;*/
+      /*  margin: 0;*/
+      /*  padding: 0;*/
+      /*}*/

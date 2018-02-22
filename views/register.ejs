@@ -1,11 +1,16 @@
 <% include ./partials/header %>
 
-<h1> Sign Up!</h1>
+<div class="container-fluid">
+    <div style="width: 60%; margin: 40px auto;">
+        <h1> Sign Up!</h1>
 
-<form action="/register" method="POST">
-    <input type="text" name="username" placeholder="username">
-    <input type="text" name="password" placeholder="password">
-    <button>Sign Up</button>
-</form>
+        <form action="/register" method="POST">
+            <input type="text" name="username" placeholder="username">
+            <input type="text" name="password" placeholder="password">
+            <button>Sign Up</button>
+        </form>
+    </div>
+</div>
+
 
 <% include ./partials/footer %>

@@ -9,6 +9,10 @@
 .navbar-default .navbar-nav>li>a {
     color: black;
 }
+.inactiveLink {
+   pointer-events: none;
+   cursor: default;
+}
 p {
     font-size: 18px;
 }

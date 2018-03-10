@@ -30,8 +30,10 @@ app.use(flash());
 // seedDB(); //seed the database
 
 //passport configuration
+
+var secretPhrase = process.env.SECRETPHRASE;
 app.use(require("express-session")({
-    secret: "Taylor is a really cool person!",
+    secret: secretPhrase,
     resave: false,
     saveUninitialized: false
 }));

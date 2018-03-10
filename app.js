@@ -1,5 +1,6 @@
 var express         = require("express"),
     app             = express(),
+    expressSanitizer = require("express-sanitizer"),
     bodyParser      = require("body-parser"),
     mongoose        = require("mongoose"),
     flash           = require("connect-flash"),
@@ -22,10 +23,12 @@ mongoose.connect(url);
 
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(expressSanitizer());
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(express.static(__dirname + "/public/scripts"))
 app.use(methodOverride("_method"));
+
 app.use(flash());
 // seedDB(); //seed the database
 

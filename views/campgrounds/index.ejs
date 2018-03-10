@@ -1,6 +1,4 @@
 <% include ../partials/header %>
-
-
 <div class="container">
     <header class="jumbotron">
         <h1>Hello Friends!</h1>
@@ -18,7 +16,7 @@
         </p>
        
         <p>If you want to leave us a comment, click <a href="/register">sign up</a> and make an account with your real name so we know who you are!</p>
-         <% if(currentUser && currentUser.username === ("Taylor") || currentUser && currentUser.username === ("Brandon")){ %>
+         <% if(currentUser && currentUser.isAdmin){ %>
         <p>
             <a class="btn btn-primary btn-lg" href="/campgrounds/new"><span><i class="home icon"></i></span>Add New Campground</a>    
         </p>

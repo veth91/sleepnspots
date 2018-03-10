@@ -41,7 +41,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
 });
 
 //New campground form
-router.get("/new", middleware.isLoggedIn, function(req, res){
+router.get("/new", middleware.isLoggedIn, middleware.isAdmin, function(req, res){
     res.render("campgrounds/new")    
 });
 

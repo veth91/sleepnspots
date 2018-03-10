@@ -5,8 +5,14 @@
         <h1> Sign Up!</h1>
 
         <form action="/register" method="POST">
-            <input type="text" name="username" placeholder="username">
-            <input type="password" name="password" placeholder="password">
+            <div class="form-group">
+                <input type="text" name="username" placeholder="username">
+                <input type="password" name="password" placeholder="password">
+            </div>
+            <div class="form-group">
+                <p>For admins only</p>
+                <input typ="text" name="adminCode" placeholder="Admin code">
+            </div>
             <button>Sign Up</button>
         </form>
     </div>

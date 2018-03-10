@@ -14,7 +14,7 @@ middlewareObj.checkCampgroundOwnership = function(req, res, next){
                 res.redirect("back");
             } else{
                 //does user own campground?
-                if(foundCampground.author.id.equals(req.user.id)) {
+                if(foundCampground.author.id.equals(req.user.id) || req.user.isAdmin) {
                     next();
                 } else {
                     req.flash("error", "You don't have permission to do that");
@@ -37,7 +37,7 @@ middlewareObj.checkCommentOwnership = function(req, res, next){
                 res.redirect("back");
             } else{
                 //does user own the comment?
-                if(foundComment.author.id.equals(req.user.id)) {
+                if(foundComment.author.id.equals(req.user.id) || req.user.isAdmin) {
                     next();
                 } else {
                     req.flash("error", "You don't have permission to do that");
@@ -57,6 +57,14 @@ middlewareObj.isLoggedIn = function(req, res, next){
     }
     req.flash("error", "You need to be logged in to do that");
     res.redirect("/login");
+}
+
+middlewareObj.isAdmin = function(req,res, next){
+    if(req.user.isAdmin){
+        return next();
+    } 
+    req.flash("error, only admins can add sleeping spots");
+    res.redirect("back");
 }
 
 module.exports = middlewareObj;

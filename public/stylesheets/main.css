@@ -19,7 +19,7 @@ p {
 body {
     font-family: raleway
 }
-.thumbnail img{
+.img-responsive {
     max-height: 250px;
 }
 .thumbnail {

@@ -31,9 +31,9 @@
     
     <div class="row text-center">
        <% campgrounds.forEach(function(campground){ %>
-            <div class="col-md-3 col-sm-6"> 
+            <div class="col-md-4 col-sm-6"> 
                 <div class="thumbnail">
-                    <img src="<%= campground.image %>"></img>
+                    <img class="img-responsive" src="<%= campground.image %>"></img>
                     <div class="caption">
                         <h4><%= campground.name %></h4>
                     </div>

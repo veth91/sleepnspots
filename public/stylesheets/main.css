@@ -20,11 +20,7 @@ body {
     font-family: raleway
 }
 .thumbnail img{
-    width: 100%;
-    /*width: auto;*/
-    /*max-width: 300px;*/
-    /*height: auto;*/
-    /*max-height: 500px;*/
+    max-height: 250px;
 }
 .thumbnail {
     padding: 0;
@@ -38,9 +34,3 @@ ol {
 .caption-full p:nth-of-type(1) {
     white-space: pre-wrap;
 }
-
-      /*html, body {*/
-      /*  height: 100%;*/
-      /*  margin: 0;*/
-      /*  padding: 0;*/
-      /*}*/
